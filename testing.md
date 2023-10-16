@@ -1,564 +1,768 @@
-1. True or False: An expression always returns a value.
+1. T/F: In Java, a class can be instantiated directly without defining a constructor.
 
    - [ ] True
-   - Explanation: Expressions can return values, but not all of them do. For example, a simple assignment expression does not return a value.
-   - [x] False (Right Answer)
+   - [x] False
 
-2. True or False: A statement can be used as an operand in an expression.
+   **Explanation:** False. In Java, a constructor is used to initialize objects. If a class doesn't define a constructor, a default constructor is provided, but you still need a constructor to create objects explicitly.
+
+2. T/F: Class variables in Java are specific to an instance of the class.
 
    - [ ] True
-   - Explanation: Statements are not meant to be used as operands in expressions. Expressions yield values, while statements do not.
-   - [x] False (Right Answer)
+         **Explanation:** False. Class variables, also known as static variables, are shared across all instances of a class. They are not specific to any single instance
+   - [x] False
 
-3. Which of the following is not a valid Java statement?
+.
 
-   - [ ] `if (x > 5) { }`
-     - Explanation: `x + 5;` is not a valid statement because it does not have any side effects or assignment. It's a valid expression but not a statement.
-   - [x] `x + 5;` (Right Answer)
-   - [ ] `System.out.println("Hello, world!");`
-     - Explanation: `x + 5;` is not a valid statement because it does not have any side effects or assignment. It's a valid expression but not a statement.
-   - [ ] `int x = 10;`
-     - Explanation: `x + 5;` is not a valid statement because it does not have any side effects or assignment. It's a valid expression but not a statement.
+3. Which of the following is the correct way to define a class in Java?
 
-4. What is the purpose of a block in Java code?
+   - [ ] `class MyClass() {}`
+         **Explanation:** The correct syntax for defining a class in Java is simply `class ClassName {}`.
+   - [x] `class MyClass {}`
+   - [ ] `void class MyClass {}`
+         **Explanation:** The correct syntax for defining a class in Java is simply `class ClassName {}`.
+   - [ ] `new class MyClass {}`
+         **Explanation:** The correct syntax for defining a class in Java is simply `class ClassName {}`.
 
-   - [ ] To define a variable
-   - Explanation: Blocks are used to group multiple statements together and define a scope.
-   - [ ] To declare a method
-   - Explanation: Blocks are used to group multiple statements together and define a scope.
-   - [ ] To terminate a program
-   - Explanation: Blocks are used to group multiple statements together and define a scope.
-   - [x] To group multiple statements together (Right Answer)
+4. What is the purpose of a constructor in Java?
 
-5. In Java, which statement is used to exit a loop prematurely?
+   - [ ] To create class variables.
 
-   - [ ] `return`
-   - Explanation: The `break` statement is used to exit a loop prematurely.
-   - [ ] `break`
-   - Explanation: The `break` statement is used to exit a loop prematurely.
-   - [ ] `continue`
-   - Explanation: The `break` statement is used to exit a loop prematurely.
-   - [x] `break` (Right Answer)
+   **Explanation:** Constructors in Java are used to initialize the state of an object when it is created.
 
-6. What will be the value of `result` after the following code is executed?
+   - [x] To initialize object state.
+   - [ ] To define static methods.
+
+   **Explanation:** Constructors in Java are used to initialize the state of an object when it is created.
+
+   - [ ] To declare instance variables.
+
+   **Explanation:** Constructors in Java are used to initialize the state of an object when it is created.
+
+5. When should you use a static (class) variable in Java?
+
+   - [x] When you want a value shared among all instances of the class.
+   - [ ] When you want a variable that changes its value for each object.
+
+     **Explanation:** Static variables are used when you want a value shared among all instances of the class.
+
+   - [ ] When you want to prevent object creation.
+         **Explanation:** Static variables are used when you want a value shared among all instances of the class.
+   - [ ] When you want to make a variable constant.
+         **Explanation:** Static variables are used when you want a value shared among all instances of the class.
+
+6. What is the output of the following Java code?
+
+   ```java
+   class MyClass {
+       static int count = 0;
+
+       MyClass() {
+           count++;
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           MyClass obj1 = new MyClass();
+           MyClass obj2 = new MyClass();
+           System.out.println(MyClass.count);
+       }
+   }
+   ```
+
+   - [ ] 0
+
+   **Explanation:** Two objects of the `MyClass` are created, and the constructor increments the `count` each time an object is created. Thus, the output is 2.
+
+   - [ ] 1
+
+   **Explanation:** Two objects of the `MyClass` are created, and the constructor increments the `count` each time an object is created. Thus, the output is 2.
+
+   - [ ] 2
+
+   **Explanation:** Two objects of the `MyClass` are created, and the constructor increments the `count` each time an object is created. Thus, the output is 2.
+
+   - [x] 2
+
+7. What is missing in the following Java class definition to make it valid?
+
+   ```java
+   public class Student {
+       String name;
+       int age;
+
+       // What is missing here?
+   }
+   ```
+
+   - [ ] Constructors
+
+   **Explanation:** Access modifiers (e.g., public, private) are missing. You should specify the visibility of the class members (fields, methods) using access modifiers.
+
+   - [x] Access modifiers
+   - [ ] Class variables
+
+   **Explanation:** Access modifiers (e.g., public, private) are missing. You should specify the visibility of the class members (fields, methods) using access modifiers.
+
+   - [ ] Main method
+
+   **Explanation:** Access modifiers (e.g., public, private) are missing. You should specify the visibility of the class members (fields, methods) using access modifiers.
+
+8. Which keyword is used to create an instance (object) of a class in Java?
+
+   - [ ] create
+         **Explanation:** The `new` keyword is used to create an instance of a class in Java.
+   - [x] new
+   - [ ] instance
+         **Explanation:** The `new` keyword is used to create an instance of a class in Java.
+   - [ ] class
+         **Explanation:** The `new` keyword is used to create an instance of a class in Java.
+
+9. What is the purpose of a constructor with parameters in Java?
+
+   - [ ] To create a static variable.
+         **Explanation:** A constructor with parameters allows you to initialize object properties with specific values during object creation.
+   - [x] To initialize object properties with specific values during object creation.
+   - [ ] To define class variables.
+         **Explanation:** A constructor with parameters allows you to initialize object properties with specific values during object creation.
+   - [ ] To access instance variables.
+         **Explanation:** A constructor with parameters allows you to initialize object properties with specific values during object creation.
+
+10. Consider the following Java code:
 
 ```java
-int x = 5;
-int y = 7;
-int result = x + (y = 3);
-```
+class Example {
+    static int count = 0;
 
-- [ ] 15
-- Explanation: The code assigns 3 to `y`, and then adds the value of `x` to the updated `y`, resulting in `8`.
-- [x] 8 (Right Answer)
-- [ ] 10
-- Explanation: The code assigns 3 to `y`, and then adds the value of `x` to the updated `y`, resulting in `8`.
-- [ ] 7
-- Explanation: The code assigns 3 to `y`, and then adds the value of `x` to the updated `y`, resulting in `8`.
+    Example() {
+        count++;
+    }
+}
 
-7. What is the output of the following code?
-
-```java
-int x = 10;
-if (x > 5) {
-    System.out.println("Hello");
-} else {
-    System.out.println("World");
+public class Main {
+    public static void main(String[] args) {
+        Example obj1 = new Example();
+        Example obj2 = new Example();
+        Example obj3 = new Example();
+        System.out.println(Example.count);
+    }
 }
 ```
 
-- [ ] "Hello"
-- Explanation: Since `x` is greater than 5, it will print "Hello."
-- [x] "Hello" (Right Answer)
-- [ ] "World"
-- Explanation: Since `x` is greater than 5, it will print "Hello."
-- [ ] "Hello\\nWorld"
-- Explanation: Since `x` is greater than 5, it will print "Hello."
+What is the output of this code?
 
-8. Which of the following code snippets contains a valid Java block?
-
-   - [ ] `if (x > 5) {}`
-   - Explanation: `{ int y = 10; }` is a valid block with a variable declaration
-   - [x] `{ int y = 10; }` (Right Answer)
-   - [ ] `int z = 15;`
-   - Explanation: `{ int y = 10; }` is a valid block with a variable declaration
-   - [ ] `while (true) { return; }`
-   - Explanation: `{ int y = 10; }` is a valid block with a variable declaration
-
-9. In Java, what is the result of the expression `10 / 3`?
-
-   - [ ] 3
-   - Explanation: In Java, when both operands are integers, division results in an integer, truncating the fractional part.
-   - [ ] 3.0
-   - Explanation: In Java, when both operands are integers, division results in an integer, truncating the fractional part.
-   - [x] 3 (Right Answer)
-   - [ ] 3.333
-   - Explanation: In Java, when both operands are integers, division results in an integer, truncating the fractional part.
-
-10. What is the value of `result` after the following code is executed?
-
-```java
-int x = 5;
-int result = (x > 3) ? 10 : 20;
-```
-
-- [ ] 5
-- Explanation: The conditional (ternary) operator assigns 10 to `result` because the condition `x > 3` is true.
-- [ ] 3
-- Explanation: The conditional (ternary) operator assigns 10 to `result` because the condition `x > 3` is true.
-- [x] 10 (Right Answer)
-- [ ] 20
-- Explanation: The conditional (ternary) operator assigns 10 to `result` because the condition `x > 3` is true.
-
-11. True or False: All code within a block is executed, regardless of whether the block is inside a conditional statement.
-
-- [ ] True
-- Explanation: Code within a block is executed only when the condition associated with the block is true.
-- [x] False (Right Answer)
-
-12. True or False: An expression can be a standalone statement in Java.
-
-- [ ] True
-- Explanation: Expressions can be part of statements, but they cannot be standalone statements in Java.
-- [x] False (Right Answer)
-
-13. What is the purpose of the `return` statement in Java?
-
-- [ ] To print a value to the console
-      -Explanation: To exit a method and return a value
-- [x] To exit a method and return a value (Right Answer)
-- [ ] To terminate the program
-      -Explanation: To exit a method and return a value
-- [ ] To declare a variable
-      -Explanation: To exit a method and return a value
-
-14. In Java, what is the role of the `default` label in a `switch` statement?
-
-- [ ] It defines a default method for the class.
-      -Explanation:It specifies the code to be executed when no `case` matches
-- [x] It specifies the code to be executed when no `case` matches (Right Answer)
-- [ ] It is used to define a default constructor.
-      -Explanation:It specifies the code to be executed when no `case` matches
-- [ ] It represents the highest access modifier.
-      -Explanation:It specifies the code to be executed when no `case` matches
-
-15. What is the purpose of the `try`, `catch`, and `finally` blocks in exception handling?
-
-- [ ] `try` is used to handle exceptions, `catch` is for normal code execution, and `finally` is for loop control.
-      -Explanation:`try` is for code that may throw exceptions, `catch` is for handling exceptions, and `finally` contains code that runs regardless of whether an exception is thrown (Right Answer)
-- [ ] `try` is used to terminate the program, `catch` is for handling exceptions, and `finally` is used to define a class constructor.
-      -Explanation:`try` is for code that may throw exceptions, `catch` is for handling exceptions, and `finally` contains code that runs regardless of whether an exception is thrown (Right Answer)
-- [x] `try` is for code that may throw exceptions, `catch` is for handling exceptions, and `finally` contains code that runs regardless of whether an exception is thrown (Right Answer)
-- [ ] `try` is used to start a loop, `catch` is for conditional statements, and `finally` is for variable declarations.
-      -Explanation:`try` is for code that may throw exceptions, `catch` is for handling exceptions, and `finally` contains code that runs regardless of whether an exception is thrown (Right Answer)
-
-16. What is the value of `result` after the following code is executed?
-
-```java
-int a = 7;
-int b = 5;
-int result = a % b;
-```
-
-- [ ] 2
-      Explanation: The modulus operator `%` returns the remainder of the division of `a` by `b`, which is 2.
-- [ ] 3
-      Explanation: The modulus operator `%` returns the remainder of the division of `a` by `b`, which is 2.
 - [ ] 1
-      Explanation: The modulus operator `%` returns the remainder of the division of `a` by `b`, which is 2.
-- [x] 2 (Right Answer)
+      **Explanation:** Three objects of the `Example` class are created, and the constructor increments the `count` each time an object is created. The output is 3.
+- [ ] 3
+      **Explanation:** Three objects of the `Example` class are created, and the constructor increments the `count` each time an object is created. The output is 3.
+- [ ] 0
+      **Explanation:** Three objects of the `Example` class are created, and the constructor increments the `count` each time an object is created. The output is 3.
+- [x] 3
 
-17. What is the output of the following code?
-
-```java
-int x = 10;
-if (x > 20) {
-    System.out.println("A");
-} else if (x > 15) {
-    System.out.println("B");
-} else {
-    System.out.println("C");
-}
-```
-
-- [ ] "A"
-- Explanation: Since none of the conditions are true, it will print "C."
-- [ ] "B"
-- Explanation: Since none of the conditions are true, it will print "C."
-- [x] "C" (Right Answer)
-- [ ] "B\\nC"
-- Explanation: Since none of the conditions are true, it will print "C."
-
-18. Which of the following code snippets contains a valid Java block?
-
-- [ ] `if (x > 5) {}`
-- Explanation: `{ System.out.println("Hello"); }` is a valid block containing a statement.
-- [ ] `int y = 15;`
-- Explanation: `{ System.out.println("Hello"); }` is a valid block containing a statement.
-- [x] `{ System.out.println("Hello"); }` (Right Answer)
-- [ ] `for (int i = 0; i < 10; i++) { return; }`
-- Explanation: `{ System.out.println("Hello"); }` is a valid block containing a statement.
-
-19. In Java, what is the result of the expression `5.0 / 2`?
-
-- [ ] 2.5
-- Explanation: When one or both operands are floating-point numbers, the result is also a floating-point number.
-- [ ] 2
-- Explanation: When one or both operands are floating-point numbers, the result is also a floating-point number.
-- [x] 2.5 (Right Answer)
-- [ ] 2.0
-- Explanation: When one or both operands are floating-point numbers, the result is also a floating-point number.
-
-20. What is the value of `result` after the following code is executed?
-
-```java
-int x = 5;
-int y = 10;
-int result = (x < y) ? x : y;
-```
-
-- [ ] 5
-- Explanation: The conditional (ternary) operator assigns the value of `x` to `result` because the condition `x < y` is true.
-- [ ] 10
-- Explanation: The conditional (ternary) operator assigns the value of `x` to `result` because the condition `x < y` is true.
-- [ ] 15
-- Explanation: The conditional (ternary) operator assigns the value of `x` to `result` because the condition `x < y` is true.
-- [x] 5 (Right Answer)
-
-21. True or False: In Java, a variable declared within a block is accessible only within that block.
+11. T/F: In Java, a constructor can have a return type.
 
 - [ ] True
-- Explanation: Variables declared within a block are accessible only within that block's scope, but they can be accessed by inner blocks.
 
-- [x] False (Right Answer)
+**Explanation:** False. Constructors do not have a return type, not even `void`. They are implicitly called when an object is created.
 
-22. True or False: The `do-while` loop in Java always executes the loop body at least once.
+- [x] False
 
-- [x] True (Right Answer)
-- [ ] False
-- Explanation: The `do-while` loop first executes the loop body and then checks the condition, ensuring at least one execution.
+12. T/F: In Java, every class must have a constructor.
 
-23. What is the primary purpose of the `break` statement in Java?
+- [ ] True
+      **Explanation:** False. If a class doesn't define any constructor, a default no-argument constructor is provided by the compiler.
+- [x] False
 
-- [ ] To skip the current iteration of a loop and continue with the next iteration.
-      explanation- To exit a loop prematurely or terminate a `switch` statement
-- [x] To exit a loop prematurely or terminate a `switch` statement (Right Answer)
-- [ ] To create a new code block.
-      explanation- To exit a loop prematurely or terminate a `switch` statement
-- [ ] To jump to a specific label within a method.
-      explanation- To exit a loop prematurely or terminate a `switch` statement
+13. What is the primary purpose of encapsulation in Java?
 
-24. What does the term "scope" refer to in Java programming?
+- [ ] To create objects.
+      **Explanation:** Encapsulation in Java is used to hide the internal details of a class and provide controlled access to its members, which helps in data security and maintainability.
+- [ ] To define constructors.
+      **Explanation:** Encapsulation in Java is used to hide the internal details of a class and provide controlled access to its members, which helps in data security and maintainability.
+- [ ] To declare class variables.
+      **Explanation:** Encapsulation in Java is used to hide the internal details of a class and provide controlled access to its members, which helps in data security and maintainability.
+- [x] To hide the internal details of a class and provide controlled access to its members.
 
-- [ ] The order in which methods are called.
-      -Explanation:The region of code where a variable is accessible
-- [ ] The type of data a variable can store.
-      -Explanation:The region of code where a variable is accessible
-- [ ] The number of parameters in a method.
-      -Explanation:The region of code where a variable is accessible
-- [x] The region of code where a variable is accessible (Right Answer)
+14. When is the `this` keyword used in Java?
 
-25. In Java, what is the purpose of the `continue` statement in a loop?
+- [ ] To create objects.
+      **Explanation:** The `this` keyword is used to refer to the current instance of a class within instance methods.
+- [ ] To define constructors.
+      **Explanation:** The `this` keyword is used to refer to the current instance of a class within instance methods.
+- [ ] To declare class variables.
+      **Explanation:** The `this` keyword is used to refer to the current instance of a class within instance methods.
+- [x] To refer to the current instance of a class within instance methods.
 
-- [ ] To exit the loop prematurely.
-      -Explanation:To skip the rest of the current iteration and continue with the next iteration
-- [x] To skip the rest of the current iteration and continue with the next iteration (Right Answer)
-- [ ] To terminate the program.
-      -Explanation:To skip the rest of the current iteration and continue with the next iteration
-- [ ] To create an infinite loop.
-      -Explanation:To skip the rest of the current iteration and continue with the next iteration
+15. What is a default constructor in Java?
 
-26. What is the value of `result` after the following code is executed?
+- [ ] A constructor with a single parameter.
 
-```java
-int x = 6;
-int result = 3 * x--;
-```
+  **Explanation:** A default constructor in Java is a constructor with no arguments that is provided by the compiler if no constructors are explicitly defined in the class.
 
-- [ ] 18
-- Explanation: The expression `3 * x--` first multiplies `x` by 3 and then decrements `x`, resulting in 18.
-- [ ] 15
-- Explanation: The expression `3 * x--` first multiplies `x` by 3 and then decrements `x`, resulting in 18.
-- [x] 18 (Right Answer)
-- [ ] 15
-- Explanation: The expression `3 * x--` first multiplies `x` by 3 and then decrements `x`, resulting in 18.
+- [ ] A constructor that is automatically generated for a class.
+      **Explanation:** A default constructor in Java is a constructor with no arguments that is provided by the compiler if no constructors are explicitly defined in the class.
+- [x] A constructor with no arguments that is provided by the compiler if no constructors are defined.
+- [ ] A constructor for creating default objects.
+      **Explanation:** A default constructor in Java is a constructor with no arguments that is provided by the compiler if no constructors are explicitly defined in the class.
 
-27. What is the output of the following code?
+16. What is the output of the following Java code?
 
 ```java
-int count = 0;
-while (count < 5) {
-    System.out.print(count + " ");
-    count += 2;
+class Car {
+    String model;
+
+    Car(String model) {
+        this.model = model;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car1 = new Car("Sedan");
+        Car car2 = new Car("SUV");
+        System.out.println(car1.model + " and " + car2.model);
+    }
 }
 ```
 
-- [ ] "0 1 2 3 4 "
-- Explanation: The `while` loop prints values from 0 to 4 in steps of 2.
-- [ ] "0 2 4 "
-- Explanation: The `while` loop prints values from 0 to 4 in steps of 2.
-- [x] "0 2 4 " (Right Answer)
-- [ ] "0 1 2 3 4 5 "
-- Explanation: The `while` loop prints values from 0 to 4 in steps of 2.
+- [ ] "Sedan and Sedan"
 
-28. Which of the following code snippets contains a valid Java block?
+**Explanation:** The `model` attribute of each car object is set by the constructor, so car1 is "Sedan" and car2 is "SUV."
 
-- [ ] `int x = 10;`
-- Explanation: `{ int y = 15; }` is a valid block with a variable declaration.
-- [ ] `if (x > 5) {}`
-- Explanation: `{ int y = 15; }` is a valid block with a variable declaration.
-- [ ] `{ x++; }`
-- Explanation: `{ int y = 15; }` is a valid block with a variable declaration.
-- [x] `{ int y = 15; }` (Right Answer)
+- [ ] "SUV and Sedan"
 
-29. In Java, what is the result of the expression `(5 + 2) / 3`?
+**Explanation:** The `model` attribute of each car object is set by the constructor, so car1 is "Sedan" and car2 is "SUV."
+
+- [ ] "Sedan and SUV"
+
+**Explanation:** The `model` attribute of each car object is set by the constructor, so car1 is "Sedan" and car2 is "SUV."
+
+- [x] "Sedan and SUV"
+
+17. Which keyword is used to access class variables in Java?
+
+- [ ] this
+      **Explanation:** Class variables are accessed using the class name, not with `this`.
+- [x] ClassName
+- [ ] super
+      **Explanation:** Class variables are accessed using the class name, not with `this`.
+- [ ] new
+      **Explanation:** Class variables are accessed using the class name, not with `this`.
+
+18. In Java, which of the following statements about instance variables is correct?
+
+- [ ] They are shared among all instances of a class.
+      **Explanation:** Instance variables are specific to each instance (object) of a class.
+
+- [x] They are specific to each instance of a class.
+- [ ] They are declared as `static`.
+      **Explanation:** Instance variables are specific to each instance (object) of a class.
+
+- [ ] They are created with the `new` keyword.
+      **Explanation:** Instance variables are specific to each instance (object) of a class.
+
+19. What is the purpose of the `static` keyword in Java?
+
+- [ ] To make a variable specific to an instance.
+
+**Explanation:** The `static` keyword is used to create class-level variables and methods, which are shared among all instances of a class.
+
+- [ ] To create a constructor.
+
+**Explanation:** The `static` keyword is used to create class-level variables and methods, which are shared among all instances of a class.
+
+- [x] To create class-level variables and methods.
+- [ ] To make a method specific to an instance.
+
+**Explanation:** The `static` keyword is used to create class-level variables and methods, which are shared among all instances of a class.
+
+20. Consider the following Java code:
+
+```java
+class Employee {
+    String name;
+    static int employeeCount = 0;
+
+    Employee(String name) {
+        this.name = name;
+        employeeCount++;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp1 = new Employee("Alice");
+        Employee emp2 = new Employee("Bob");
+        System.out.println(Employee.employeeCount);
+    }
+}
+```
+
+What is the output of this code?
+
+- [ ] 1
+      **Explanation:** Two `Employee` objects are created, and the `employeeCount` is incremented each time an object is created. The output is 2.
 
 - [ ] 2
-- Explanation: The expression evaluates to 7 / 3, which is 2 in integer division.
-- [ ] 2.33
-- Explanation: The expression evaluates to 7 / 3, which is 2 in integer division.
-- [x] 2 (Right Answer)
-- [ ] 2.0
-- Explanation: The expression evaluates to 7 / 3, which is 2 in integer division.
-
-30. What is the value of `result` after the following code is executed?
-
-```java
-int x = 5;
-int y = 7;
-int result = (x > y) ? x + y : x - y;
-```
-
-- [ ] 12
-- Explanation: The conditional (ternary) operator assigns `x - y` to `result` because the condition `x > y` is false.
-- [ ] -2
-- Explanation: The conditional (ternary) operator assigns `x - y` to `result` because the condition `x > y` is false.
-- [ ] 5
-- Explanation: The conditional (ternary) operator assigns `x - y` to `result` because the condition `x > y` is false.
-- [x] -2 (Right Answer)
-
-31. True or False: In Java, a block can have its own local variables with the same names as variables in an outer scope.
-
-- [x] True (Right Answer)
-- [ ] False
-- Explanation: A block can have local variables with the same names as variables in an outer scope, and the inner variable will shadow the outer one.
-
-32. True or False: The `return` statement is used to terminate the execution of a method in Java.
-
-- [x] True (Right Answer)
-- [ ] False
-- Explanation: The `return` statement is used to exit a method and optionally return a value to the caller.
-
-33. What is the purpose of the `switch` statement in Java?
-
-- [ ] To perform mathematical operations.
-      Explanation-To provide a way to select one of many code blocks to execute based on a value
-- [ ] To define a custom class.
-      Explanation-To provide a way to select one of many code blocks to execute based on a value
-- [x] To provide a way to select one of many code blocks to execute based on a value (Right Answer)
-- [ ] To terminate the program.
-      Explanation-To provide a way to select one of many code blocks to execute based on a value
-
-34. What is the difference between an expression statement and a block in Java?
-
-- [ ] An expression statement is used to group multiple expressions, while a block is used to execute code conditionally.
-      -Explanation:
-      Scope.
-- [ ] An expression statement contains a single expression, while a block can contain multiple statements.
-      -Explanation:
-      Scope.
-- [x] An expression statement contains an expression that is executed for its side effects, while a block defines a scope and contains multiple statements (Right Answer)
-- [ ] An expression statement is only used in loops, while a block is used in conditional statements.
-      -Explanation:
-      Scope.
-
-35. What is the role of the `else` clause in an `if-else` statement in Java?
-
-- [ ] To specify the condition for entering the `if` block.
-      -Explanation:in case if fails it works
-- [x] To define the code block that is executed when the `if` condition is false (Right Answer)
-- [ ] To create a new variable.
-      -Explanation:in case if fails it works
-- [ ] To terminate the program.
-      -Explanation:in case if fails it works
-
-36. What is the value of `result` after the following code is executed?
-
-```java
-int x = 10;
-int result = (x % 3 == 0) ? (x / 3) : (x * 2);
-```
-
-- [ ] 10
-- Explanation: The conditional (ternary) operator assigns `x / 3` to `result` because the condition `x % 3 == 0` is true.
-- [ ] 20
-- Explanation: The conditional (ternary) operator assigns `x / 3` to `result` because the condition `x % 3 == 0` is true.
-- [x] 3 (Right Answer)
-- [ ] 6
-- Explanation: The conditional (ternary) operator assigns `x / 3` to `result` because the condition `x % 3 == 0` is true.
-
-37. What is the output of the following code?
-
-```java
-int i = 0;
-do {
-    System.out.print(i + " ");
-    i++;
-} while (i < 5);
-```
-
-- [ ] "0 1 2 3 4 5 "
-- Explanation: The `do-while` loop prints values from 0 to 4.
-- [ ] "0 1 2 3 4 "
-- Explanation: The `do-while` loop prints values from 0 to 4.
-- [ ] "1 2 3 4 5 "
-- Explanation: The `do-while` loop prints values from 0 to 4.
-- [x] "0 1 2 3 4 " (Right Answer)
-
-38. Which of the following code snippets contains a valid Java block?
-
-- [x] `{ int y = 15; }` (Right Answer)
-- [ ] `int x = 10;`
-- Explanation: `{ int y = 15; }` is a valid block with a variable declaration.
-- [ ] `if (x > 5) {}`
-- Explanation: `{ int y = 15; }` is a valid block with a variable declaration.
-- [ ] `for (int i = 0; i < 10; i++) { return; }`
-- Explanation: `{ int y = 15; }` is a valid block with a variable declaration.
-
-39. In Java, what is the result of the expression `10 % 3`?
+      **Explanation:** Two `Employee` objects are created, and the `employeeCount` is incremented each time an object is created. The output is 2.
 
 - [ ] 0
-- Explanation: The modulus operator `%` returns the remainder of the division of 10 by 3, which is 1.
-- [ ] 3
-- Explanation: The modulus operator `%` returns the remainder of the division of 10 by 3, which is 1.
-- [x] 1 (Right Answer)
-- [ ] 10
-- Explanation: The modulus operator `%` returns the remainder of the division of 10 by 3, which is 1.
+      **Explanation:** Two `Employee` objects are created, and the `employeeCount` is incremented each time an object is created. The output is 2.
 
-40. What is the value of `result` after the following code is executed?
+- [x] 2
 
-```java
-int x = 5;
-int y = 7;
-int result = (x < y) ? (x + y) : (x - y);
-```
-
-- [ ] 12
-- Explanation: The conditional (ternary) operator assigns `x + y` to `result` because the condition `x < y` is true.
-- [ ] -2
-- Explanation: The conditional (ternary) operator assigns `x + y` to `result` because the condition `x < y` is true.
-- [ ] 5
-- Explanation: The conditional (ternary) operator assigns `x + y` to `result` because the condition `x < y` is true.
-- [x] 12 (Right Answer)
-
-41. True or False: In Java, a variable declared as `final` can be reassigned to a different value after its initial assignment.
+21. T/F: In Java, a class can extend more than one class (multiple inheritance).
 
 - [ ] True
-- Explanation: A `final` variable in Java cannot be reassigned after its initial assignment.
-- [x] False (Right Answer)
+      **Explanation:** False. Java does not support multiple inheritance for classes; a class can extend only one other class.
+- [x] False
 
-42. True or False: The `default` case in a `switch` statement is optional.
+22. T/F: A subclass inherits all the members (fields and methods) of its superclass.
 
-- [ ] True
-- Explanation: The `default` case is optional, but it's often used to provide a default action when none of the `case` values match.
-- [x] False (Right Answer)
+- [x] True
+- [ ] False
+      **Explanation:** True. A subclass inherits all the members of its superclass, both fields and methods, unless they are marked as private or overridden.
 
-43. What is the primary purpose of the `continue` statement in a loop in Java?
+13. What is the purpose of the `super` keyword in Java?
 
-- [ ] To exit the loop prematurely.
-      -Explanation:Skips the current iteration
-- [ ] To jump to a specific label within a method.
-      -Explanation:Skips the current iteration
-- [ ] To terminate the program.
-      -Explanation:Skips the current iteration
-- [x] To skip the rest of the current iteration and continue with the next iteration (Right Answer)
+- [ ] To create an instance of a superclass.
+      **Explanation:** The `super` keyword is used to refer to the superclass or call its constructors and methods from a subclass.
+- [ ] To access class variables.
+      **Explanation:** The `super` keyword is used to refer to the superclass or call its constructors and methods from a subclass.
+- [ ] To define constructors.
+      **Explanation:** The `super` keyword is used to refer to the superclass or call its constructors and methods from a subclass.
+- [x] To refer to the superclass or call its constructors and methods from a subclass.
 
-44. In Java, what is a compound statement?
+24. What is method overriding in Java?
 
-- [ ] A statement involving financial transactions.
-      -Explanation: A block of code enclosed in curly braces `{}` that groups multiple statements
-- [ ] A statement that combines two expressions into one.
-      -Explanation: A block of code enclosed in curly braces `{}` that groups multiple statements
-- [x] A block of code enclosed in curly braces `{}` that groups multiple statements (Right Answer)
-- [ ] A statement with multiple return values.
-      -Explanation: A block of code enclosed in curly braces `{}` that groups multiple statements
+- [ ] Creating a new method in a subclass with a different name.
+      **Explanation:** Method overriding in Java means providing a specific implementation for a method in a subclass that is already defined in its superclass.
+- [x] Providing a specific implementation for a method in a subclass that is already defined in its superclass.
+- [ ] Defining a new constructor in a subclass.
+      **Explanation:** Method overriding in Java means providing a specific implementation for a method in a subclass that is already defined in its superclass.
+- [ ] Declaring a method as private in a subclass.
+      **Explanation:** Method overriding in Java means providing a specific implementation for a method in a subclass that is already defined in its superclass.
 
-45. What is the purpose of the `break` statement within a `switch` case in Java?
+25. What is the difference between an instance variable and a class variable in Java?
 
-- [ ] To exit the method.
-      -Explanation:To exit out of switch
-- [ ] To terminate the program.
-      -Explanation:To exit out of switch
-- [ ] To restart the loop.
-      -Explanation:To exit out of switch
-- [x] To exit the `switch` statement and continue with the code after the `switch` (Right Answer)
+- [ ] Instance variables are shared among all instances of a class, while class variables are specific to each instance.
 
-46. What is the value of `result` after the following code is executed?
+**Explanation:** Instance variables are specific to each instance (object) of a class, while class variables (static variables) are shared among all instances.
 
-```java
-int x = 5;
-int y = 2;
-int result = x % y;
-```
+- [x] Instance variables are specific to each instance of a class, while class variables are shared among all instances.
+- [ ] Instance variables are declared with the `static` keyword, while class variables are not.
 
-- [ ] 2
-- Explanation: The modulus operator `%` returns the remainder of the division of 5 by 2, which is 1.
-- [ ] 2.5
-- Explanation: The modulus operator `%` returns the remainder of the division of 5 by 2, which is 1.
-- [ ] 3
-- Explanation: The modulus operator `%` returns the remainder of the division of 5 by 2, which is 1.
-- [x] 1 (Right Answer)
+**Explanation:** Instance variables are specific to each instance (object) of a class, while class variables (static variables) are shared among all instances.
 
-47. What is the output of the following code?
+- [ ] There is no difference; they are interchangeable.
+
+**Explanation:** Instance variables are specific to each instance (object) of a class, while class variables (static variables) are shared among all instances.
+
+26. Given the following code snippet, what is the expected output?
 
 ```java
-int i = 0;
-while (i < 5) {
-    System.out.print(i + " ");
-    i++;
+class Animal {
+    void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Cat extends Animal {
+    void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myPet = new Cat();
+        myPet.makeSound();
+    }
 }
 ```
 
-- [ ] "0 1 2 3 4 "
-- Explanation: The `while` loop prints values from 0 to 4.
-- [ ] "0 1 2 3 4 5 "
-- Explanation: The `while` loop prints values from 0 to 4.
-- [ ] "1 2 3 4 5 "
-- Explanation: The `while` loop prints values from 0 to 4.
-- [x] "0 1 2 3 4 " (Right Answer)
+- [ ] "Animal makes a sound"
+      **Explanation:** The output will be "Cat meows" because the method in the subclass `Cat` overrides the method in the superclass `Animal`.
 
-48. Which of the following code snippets contains a valid Java block?
+- [ ] "Cat meows"
+      **Explanation:** The output will be "Cat meows" because the method in the subclass `Cat` overrides the method in the superclass `Animal`.
 
-- [ ] `if (x > 5) {}`
-- Explanation: `{ int y = 15; }` is a valid block with a variable declaration.
-- [x] `{ int y = 15; }` (Right Answer)
-- [ ] `int x = 10;`
-- Explanation: `{ int y = 15; }` is a valid block with a variable declaration.
-- [ ] `for (int i = 0; i < 10; i++) { return; }`
-- Explanation: `{ int y = 15; }` is a valid block with a variable declaration.
+- [ ] Compilation error
+      **Explanation:** The output will be "Cat meows" because the method in the subclass `Cat` overrides the method in the superclass `Animal`.
 
-49. In Java, what is the result of the expression `6 / 4`?
+- [x] "Cat meows"
 
-- [ ] 1
-- Explanation: In Java, integer division truncates the fractional part, so the result is 1.
-- [ ] 1.5
-- Explanation: In Java, integer division truncates the fractional part, so the result is 1.
-- [ ] 2
-- Explanation: In Java, integer division truncates the fractional part, so the result is 1.
-- [x] 1 (Right Answer)
+27. Which keyword is used to explicitly call the constructor of a superclass from a subclass constructor?
 
-50. What is the value of `result` after the following code is executed?
+- [ ] superclass
+      **Explanation:** The `super` keyword is used to explicitly call the constructor of a superclass from a subclass constructor.
+- [ ] parent
+      **Explanation:** The `super` keyword is used to explicitly call the constructor of a superclass from a subclass constructor.
+- [ ] base
+      **Explanation:** The `super` keyword is used to explicitly call the constructor of a superclass from a subclass constructor.
+- [x] super
+
+28. What is the access modifier for a class member that is only accessible within its own class?
+
+- [x] private
+- [ ] public
+
+**Explanation:** The `private` access modifier restricts access to the member to within its own class.
+
+- [ ] protected
+
+**Explanation:** The `private` access modifier restricts access to the member to within its own class.
+
+- [ ] default (package-private)
+
+**Explanation:** The `private` access modifier restricts access to the member to within its own class.
+
+29. In Java, which of the following is a correct way to declare a constant (variable with a fixed value) in a class?
+
+- [ ] `constant int VALUE = 10;`
+
+**Explanation:** To declare a constant in Java, you should use the `final` and `static` modifiers, typically written as `final static`.
+
+- [ ] `const VALUE = 10;`
+
+**Explanation:** To declare a constant in Java, you should use the `final` and `static` modifiers, typically written as `final static`.
+
+- [ ] `static final int VALUE = 10;`
+
+**Explanation:** To declare a constant in Java, you should use the `final` and `static` modifiers, typically written as `final static`.
+
+- [x] `final static int VALUE = 10;`
+
+30. Consider the following Java code:
 
 ```java
-int x = 5;
-int y = 7;
-int result = (x < y) ? (x * y) : (x + y);
+class Vehicle {
+    static int count = 0;
+
+    Vehicle() {
+        count++;
+    }
+}
+
+class Car extends Vehicle {
+    Car() {
+        count--;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle vehicle = new Car();
+        System.out.println(Vehicle.count);
+    }
+}
 ```
 
-- [ ] 12
-- Explanation: The conditional (ternary) operator assigns `x * y` to `result` because the condition `x < y` is true.
-- [ ] 35
-- Explanation: The conditional (ternary) operator assigns `x * y` to `result` because the condition `x < y` is true.
-- [ ] 5
-- Explanation: The conditional (ternary) operator assigns `x * y` to `result` because the condition `x < y` is true.
-- [x] 35 (Right Answer)
+What is the output of this code?
+
+- [ ] 1
+      **Explanation:** One `Car` object is created and assigned to a `Vehicle` reference. The `Car` constructor decrements `count`, which cancels out the increment in the `Vehicle` constructor. The output is 0.
+- [x] 0
+- [ ] -1
+      **Explanation:** One `Car` object is created and assigned to a `Vehicle` reference. The `Car` constructor decrements `count`, which cancels out the increment in the `Vehicle` constructor. The output is 0.
+- [ ] 2
+      **Explanation:** One `Car` object is created and assigned to a `Vehicle` reference. The `Car` constructor decrements `count`, which cancels out the increment in the `Vehicle` constructor. The output is 0.
+
+31. T/F: Java supports multiple constructors with the same parameter list in a class.
+
+- [ ] True
+      **Explanation:** False. Java does not allow multiple constructors with the same parameter list in a class.
+- [x] False
+
+32. T/F: You can create an object of an abstract class in Java.
+
+- [ ] True
+      **Explanation:** False. You cannot create an object of an abstract class in Java. Abstract classes are meant to be extended by concrete subclasses.
+- [x] False
+
+33. What is method overloading in Java?
+
+- [ ] Providing a specific implementation for a method in a subclass.
+      **Explanation:** Method overloading in Java is about defining multiple methods in the same class with the same name but different parameter lists.
+- [x] Defining multiple methods in the same class with the same name but different parameter lists.
+- [ ] Creating a new method in a subclass with a different name.
+      **Explanation:** Method overloading in Java is about defining multiple methods in the same class with the same name but different parameter lists.
+- [ ] Declaring a method as private in a subclass.
+      **Explanation:** Method overloading in Java is about defining multiple methods in the same class with the same name but different parameter lists.
+
+34. What is the purpose of the `final` keyword in Java?
+
+- [ ] To make a variable specific to an instance.
+      **Explanation:** The `final` keyword in Java is used to prevent a class from being extended, prevent method overriding, or declare constants.
+- [ ] To create an abstract class.
+      **Explanation:** The `final` keyword in Java is used to prevent a class from being extended, prevent method overriding, or declare constants.
+- [x] To prevent a class from being extended, prevent method overriding, or declare constants.
+- [ ] To create a constructor.
+      **Explanation:** The `final` keyword in Java is used to prevent a class from being extended, prevent method overriding, or declare constants.
+
+35. In Java, what is the `this` keyword used for in a constructor?
+
+- [ ] To refer to the superclass.
+
+**Explanation:** In a constructor, `this` is used to distinguish between instance variables and parameters with the same name.
+
+- [ ] To create a new instance of the class.
+
+**Explanation:** In a constructor, `this` is used to distinguish between instance variables and parameters with the same name.
+
+- [ ] To call another constructor from the same class.
+
+**Explanation:** In a constructor, `this` is used to distinguish between instance variables and parameters with the same name.
+
+- [x] To distinguish between instance variables and parameters with the same name.
+
+36. Given the following Java code, what is the output?
+
+```java
+class Parent {
+    void display() {
+        System.out.println("Parent class");
+    }
+}
+
+class Child extends Parent {
+    void display() {
+        System.out.println("Child class");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Parent obj = new Child();
+        obj.display();
+    }
+}
+```
+
+- [ ] "Parent class"
+      **Explanation:** The output will be "Child class" because the method in the subclass `Child` overrides the method in the superclass `Parent`, and the object is of type `Child`.
+- [ ] "Child class"
+      **Explanation:** The output will be "Child class" because the method in the subclass `Child` overrides the method in the superclass `Parent`, and the object is of type `Child`.
+- [ ] Compilation error
+      **Explanation:** The output will be "Child class" because the method in the subclass `Child` overrides the method in the superclass `Parent`, and the object is of type `Child`.
+- [x] "Child class"
+
+37. Which keyword is used to create an object of an inner class in Java?
+
+- [ ] inner
+      **Explanation:** The `new` keyword is used to create an object of a class, including inner classes.
+- [ ] this
+      **Explanation:** The `new` keyword is used to create an object of a class, including inner classes.
+- [ ] super
+      **Explanation:** The `new` keyword is used to create an object of a class, including inner classes.
+- [x] new
+
+38. What is an abstract class in Java?
+
+- [ ] A class that cannot have any methods.
+      **Explanation:** An abstract class in Java cannot be instantiated and is meant to be subclassed by concrete (non-abstract) classes.
+
+- [x] A class that cannot be instantiated and is meant to be subclassed.
+- [ ] A class with all methods marked as `static`.
+      **Explanation:** An abstract class in Java cannot be instantiated and is meant to be subclassed by concrete (non-abstract) classes.
+
+- [ ] A class with no fields or methods.
+      **Explanation:** An abstract class in Java cannot be instantiated and is meant to be subclassed by concrete (non-abstract) classes.
+
+39. In Java, how can you prevent a class from being subclassed (extended)?
+
+- [ ] Use the `final` keyword on all methods.
+      **Explanation:** To prevent a class from being subclassed, you can use the `final` keyword on the class itself.
+- [ ] Mark all methods as `private`.
+      **Explanation:** To prevent a class from being subclassed, you can use the `final` keyword on the class itself.
+- [x] Use the `final` keyword on the class itself.
+- [ ] Declare all methods as `static`.
+      **Explanation:** To prevent a class from being subclassed, you can use the `final` keyword on the class itself.
+
+40. Consider the following Java code:
+
+```java
+class Base {
+    static void display() {
+        System.out.println("Base class");
+    }
+}
+
+class Derived extends Base {
+    static void display() {
+        System.out.println("Derived class");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Base obj = new Derived();
+        obj.display();
+    }
+}
+```
+
+What is the output of this code?
+
+- [ ] "Base class"
+
+**Explanation:** The output will be "Base class" because static methods do not participate in method overriding, and the reference type determines which class's method is called.
+
+- [ ] "Derived class"
+
+**Explanation:** The output will be "Base class" because static methods do not participate in method overriding, and the reference type determines which class's method is called.
+
+- [ ] Compilation error
+
+**Explanation:** The output will be "Base class" because static methods do not participate in method overriding, and the reference type determines which class's method is called.
+
+- [x] "Base class"
+
+41. T/F: An abstract class can have both abstract and non-abstract (concrete) methods.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. An abstract class can have both abstract and concrete methods. Concrete methods have implementations, while abstract methods do not.
+
+42. T/F: Java allows you to instantiate an interface.
+
+- [ ] True
+      **Explanation:** False. You cannot create an instance of an interface in Java. Interfaces define a contract that implementing classes must adhere to.
+- [x] False
+
+43. What is the purpose of the `extends` keyword in Java class definitions?
+
+- [x] To indicate that one class is a subclass of another class, establishing an inheritance relationship.
+- [ ] To import another class.
+      **Explanation:** The `extends` keyword is used to establish an inheritance relationship between classes in Java.
+- [ ] To implement an interface.
+      **Explanation:** The `extends` keyword is used to establish an inheritance relationship between classes in Java.
+- [ ] To define a constructor.
+      **Explanation:** The `extends` keyword is used to establish an inheritance relationship between classes in Java.
+
+44. What is the primary use of the `new` keyword in Java?
+
+- [ ] To create class variables.
+      **Explanation:** The `new` keyword is used to create objects (instances) of classes in Java.
+- [ ] To define constructors.
+      **Explanation:** The `new` keyword is used to create objects (instances) of classes in Java.
+- [x] To create objects (instances) of classes.
+- [ ] To access instance variables.
+      **Explanation:** The `new` keyword is used to create objects (instances) of classes in Java.
+
+45. What is the purpose of an interface in Java?
+
+- [ ] To provide a blueprint for creating objects.
+
+**Explanation:** An interface in Java specifies a contract for classes that implement it, defining the methods that those classes must provide.
+
+- [ ] To define constructors.
+
+**Explanation:** An interface in Java specifies a contract for classes that implement it, defining the methods that those classes must provide.
+
+- [x] To specify a contract for classes that implement the interface.
+- [ ] To declare class variables.
+
+**Explanation:** An interface in Java specifies a contract for classes that implement it, defining the methods that those classes must provide.
+
+46. Given the following Java code, what is the output?
+
+```java
+interface Shape {
+    void draw();
+}
+
+class Circle implements Shape {
+    public void draw() {
+        System.out.println("Drawing a circle.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape shape = new Circle();
+        shape.draw();
+    }
+}
+```
+
+- [ ] "Drawing a circle."
+
+**Explanation:** The output will be "Drawing a circle." The `draw` method of the `Circle` class, which implements the `Shape` interface, is called.
+
+- [ ] "Drawing a shape."
+
+**Explanation:** The output will be "Drawing a circle." The `draw` method of the `Circle` class, which implements the `Shape` interface, is called.
+
+- [ ] Compilation error
+
+**Explanation:** The output will be "Drawing a circle." The `draw` method of the `Circle` class, which implements the `Shape` interface, is called.
+
+- [x] "Drawing a circle."
+
+47. In Java, what is the access modifier for a class member that is accessible within the same package but not from other packages?
+
+- [ ] `public`
+      **Explanation:** The default (package-private) access modifier allows access within the same package but not from other packages.
+- [ ] `private`
+      **Explanation:** The default (package-private) access modifier allows access within the same package but not from other packages.
+- [ ] `protected`
+      **Explanation:** The default (package-private) access modifier allows access within the same package but not from other packages.
+- [x] Default (no modifier)
+
+48. What is the purpose of an abstract method in an interface in Java?
+
+- [ ] To provide a method with an implementation.
+      **Explanation:** An abstract method in an interface defines a method signature that implementing classes must provide an implementation for.
+- [x] To declare a method signature that implementing classes must define.
+- [ ] To create a static method.
+      **Explanation:** An abstract method in an interface defines a method signature that implementing classes must provide an implementation for.
+- [ ] To prevent method overriding.
+      **Explanation:** An abstract method in an interface defines a method signature that implementing classes must provide an implementation for.
+
+49. In Java, what is the primary difference between an abstract class and an interface?
+
+- [x] An abstract class can have both abstract and concrete methods, while an interface can only have abstract methods.
+- [ ] An abstract class can have variables, while an interface cannot.
+
+**Explanation:** The primary difference is that an abstract class can have both abstract and concrete methods, while an interface can only have abstract methods.
+
+- [ ] An interface can have constructors, while an abstract class cannot.
+
+**Explanation:** The primary difference is that an abstract class can have both abstract and concrete methods, while an interface can only have abstract methods.
+
+- [ ] An abstract class can be instantiated, while an interface cannot.
+
+**Explanation:** The primary difference is that an abstract class can have both abstract and concrete methods, while an interface can only have abstract methods.
+
+50. Consider the following Java code:
+
+```java
+interface Printable {
+    void print();
+}
+
+class Document implements Printable {
+    public void print() {
+        System.out.println("Printing a document.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Printable printable = new Document();
+        printable.print();
+    }
+}
+```
+
+What is the output of this code?
+
+- [ ] "Printing a document."
+      **Explanation:** The output will be "Printing a document." The `print` method of the `Document` class, which implements the `Printable` interface, is called.
+- [ ] "Printing a printable."
+      **Explanation:** The output will be "Printing a document." The `print` method of the `Document` class, which implements the `Printable` interface, is called.
+- [ ] Compilation error
+      **Explanation:** The output will be "Printing a document." The `print` method of the `Document` class, which implements the `Printable` interface, is called.
+- [x] "Printing a document."
