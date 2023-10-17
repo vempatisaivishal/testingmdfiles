@@ -26,12 +26,12 @@
 4. **What is the primary difference between method overloading and method overriding in Java?**
 
    - [ ] Method overloading allows methods with the same name and parameters, while method overriding does not.\
-          -Explanation:Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
+          -**Explanation**:Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
    - [x] Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
    - [ ] Method overriding is the same as method overloading.
-         --Explanation:Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
+         --**Explanation**:Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
    - [ ] Method overloading is only possible in abstract classes.
-         --Explanation:Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
+         --**Explanation**:Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
 
 5. **In Java, which keyword is used to indicate that a method can be overridden by a subclass?**
 
@@ -83,23 +83,23 @@ class Example {
 ```
 
 - [ ] This is not an example of method overloading.
-      --Explanation:It is right example of method overloading as signature is varying
+      --**Explanation**:It is right example of method overloading as signature is varying
 - [x] This is an example of method overloading.
 - [ ] This code will result in a compilation error.
-      --Explanation:It is right example of method overloading as signature is varying
+      --**Explanation**:It is right example of method overloading as signature is varying
 - [ ] This code demonstrates method overriding.
-      --Explanation:It is right example of method overloading as signature is varying
+      --**Explanation**:It is right example of method overloading as signature is varying
 
 8. In the context of method overriding, what is the purpose of the `@Override` annotation in Java?
 
    - [x] It is used to indicate that a method in a subclass is intended to override a method in its superclass. It helps catch compile-time errors if the intended method is not an override.
 
    - [ ] It is used to mark methods as private to prevent any further overriding.
-         --Explanation:It helps catch compile-time errors if the intended method is not an override
+         --**Explanation**:It helps catch compile-time errors if the intended method is not an override
    - [ ] It is used to specify the access modifier of the overridden method.
-         --Explanation:It helps catch compile-time errors if the intended method is not an override
+         --**Explanation**:It helps catch compile-time errors if the intended method is not an override
    - [ ] It is not required in method overriding.
-         --Explanation:It helps catch compile-time errors if the intended method is not an override
+         --**Explanation**:It helps catch compile-time errors if the intended method is not an override
 
 9. Consider the following code snippet:
 
@@ -310,12 +310,12 @@ What is the output when you run the `main` method?
 23. **What is the primary difference between method overloading and method overriding in Java?**
 
 - [ ] Method overloading allows methods with the same name and parameters, while method overriding does not.
-      --Explanation:Method overloading involves multiple methods with the same name but different parameters
+      --**Explanation**:Method overloading involves multiple methods with the same name but different parameters
 - [x] Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
 - [ ] Method overriding is the same as method overloading.
-      --Explanation:Method overloading involves multiple methods with the same name but different parameters
+      --**Explanation**:Method overloading involves multiple methods with the same name but different parameters
 - [ ] Method overloading is only possible in abstract classes.
-      --Explanation:Method overloading involves multiple methods with the same name but different parameters
+      --**Explanation**:Method overloading involves multiple methods with the same name but different parameters
 
 24. **In Java, what is the superclass of all classes?**
 
@@ -452,22 +452,22 @@ What is the output when you run the `main` method?
 33. **What is method overriding in Java?**
 
 - [ ] The ability to create multiple methods with the same name but different parameters in a class.
-      --Explanation:The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
+      --**Explanation**:The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
 - [ ] The process of hiding an inherited method from the superclass.
-      --Explanation:The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
+      --**Explanation**:The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
 - [x] The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
 - [ ] The ability to define methods with the same name and parameters in different classes.
-      --Explanation:The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
+      --**Explanation**:The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
 
 34. **What is the main advantage of polymorphism in Java?**
 
 - [ ] It reduces code complexity.
-      --Explanation:It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
+      --**Explanation**:It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
 - [ ] It improves code performance.
-      --Explanation:It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
+      --**Explanation**:It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
 - [x] It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
 - [ ] It enforces strong data encapsulation.
-      --Explanation:It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
+      --**Explanation**:It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
 
 35. **Which keyword is used to prevent a method from being overridden in a Java subclass?**
 
@@ -588,22 +588,22 @@ What is the output when you call `myDog.makeSound()`?
 43. **What is method overriding in Java?**
 
 - [ ] The ability to create multiple methods with the same name but different parameters in a class.
-      --Explanation: The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
+      --**Explanation**: The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
 - [ ] The process of hiding an inherited method from the superclass.
-      --Explanation: The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
+      --**Explanation**: The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
 - [x] The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
 - [ ] The ability to define methods with the same name and parameters in different classes.
-      --Explanation: The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
+      --**Explanation**: The ability of a subclass to provide a specific implementation for a method that is already defined in its superclass.
 
 44. **What is the main advantage of polymorphism in Java?**
 
 - [ ] It reduces code complexity.
-      --Explanation: It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
+      --**Explanation**: It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
 - [ ] It improves code performance.
-      --Explanation: It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
+      --**Explanation**: It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
 - [x] It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
 - [ ] It enforces strong data encapsulation.
-      --Explanation: It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
+      --**Explanation**: It enhances code flexibility and extensibility by allowing objects of different classes to be treated as objects of a common superclass.
 
 45. **Which keyword is used to prevent a method from being overridden in a Java subclass?**
 
