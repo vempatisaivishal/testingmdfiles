@@ -7,7 +7,8 @@
 2. **True or False: Method overloading in Java allows multiple methods with the same name in the same class, as long as they have the same number and type of parameters.**
 
    - [x] True
-   - [ ] False \* **Explanation:** True. Method overloading enables the definition of multiple methods in the same class with the same name but different parameter lists.
+   - [ ] False \*
+         **Explanation:** True. Method overloading enables the definition of multiple methods in the same class with the same name but different parameter lists.
 
 3. **Which of the following best defines polymorphism in Java?**
 
@@ -61,10 +62,13 @@ class Derived extends Base {
 Base myObject = new Derived();
 ```
 
-- [ ] `Base` class's `printInfo` method.\ - **Explanation:** In this example of runtime polymorphism, the `Derived` class's `printInfo` method is invoked since `myObject` is of type `Base` but refers to an instance of `Derived`.
+- [ ] `Base` class's `printInfo` method.\
+  - **Explanation:** In this example of runtime polymorphism, the `Derived` class's `printInfo` method is invoked since `myObject` is of type `Base` but refers to an instance of `Derived`.
 - [x] `Derived` class's `printInfo` method.
-- [ ] An error will occur.\ - **Explanation:** In this example of runtime polymorphism, the `Derived` class's `printInfo` method is invoked since `myObject` is of type `Base` but refers to an instance of `Derived`.
-- [ ] `Base` class's `printInfo` method, but it will print "Info from the Derived class."\ - **Explanation:** In this example of runtime polymorphism, the `Derived` class's `printInfo` method is invoked since `myObject` is of type `Base` but refers to an instance of `Derived`.
+- [ ] An error will occur.\
+  - **Explanation:** In this example of runtime polymorphism, the `Derived` class's `printInfo` method is invoked since `myObject` is of type `Base` but refers to an instance of `Derived`.
+- [ ] `Base` class's `printInfo` method, but it will print "Info from the Derived class."
+      \ - **Explanation:** In this example of runtime polymorphism, the `Derived` class's `printInfo` method is invoked since `myObject` is of type `Base` but refers to an instance of `Derived`.
 
 7. Which of the following is an example of method overloading?
 
@@ -248,9 +252,12 @@ b) void printMessage(int count, String message) {
 18. In the context of method overriding, which annotation can be used to inform the compiler that a method in a subclass is intended to override a method in its superclass?
 
 - [x] `@Override`
-- [ ] `@OverrideMethod` \- **Explanation:** The `@Override` annotation is used to indicate that a method in a subclass is intended to override a method in its superclass. It helps catch compile-time errors if the intended method is not an override.
-- [ ] `@OverrideSuper`\ - **Explanation:** The `@Override` annotation is used to indicate that a method in a subclass is intended to override a method in its superclass. It helps catch compile-time errors if the intended method is not an override.
-- [ ] `@OverrideClass` \- **Explanation:** The `@Override` annotation is used to indicate that a method in a subclass is intended to override a method in its superclass. It helps catch compile-time errors if the intended method is not an override.
+- [ ] `@OverrideMethod`
+      \- **Explanation:** The `@Override` annotation is used to indicate that a method in a subclass is intended to override a method in its superclass. It helps catch compile-time errors if the intended method is not an override.
+- [ ] `@OverrideSuper`
+      \ - **Explanation:** The `@Override` annotation is used to indicate that a method in a subclass is intended to override a method in its superclass. It helps catch compile-time errors if the intended method is not an override.
+- [ ] `@OverrideClass`
+      \- **Explanation:** The `@Override` annotation is used to indicate that a method in a subclass is intended to override a method in its superclass. It helps catch compile-time errors if the intended method is not an override.
 
 19. Given the following code:
 
@@ -297,7 +304,8 @@ What is the output when you run the `main` method?
 
 21. **True or False: Polymorphism is a feature that is exclusive to object-oriented programming languages like Java.**
 
-- [ ] True \- **Explanation:** False. Polymorphism is a concept present in various programming paradigms, not just object-oriented languages like Java.
+- [ ] True
+      \- **Explanation:** False. Polymorphism is a concept present in various programming paradigms, not just object-oriented languages like Java.
 
 - [x] False
 
@@ -319,10 +327,13 @@ What is the output when you run the `main` method?
 
 24. **In Java, what is the superclass of all classes?**
 
-- [ ] `Object` \- **Explanation:** The `java.lang.Object` class is the implicit superclass of all classes in Java.
-- [ ] `Main`\ - **Explanation:** The `java.lang.Object` class is the implicit superclass of all classes in Java.
+- [ ] `Object`
+      \- **Explanation:** The `java.lang.Object` class is the implicit superclass of all classes in Java.
+- [ ] `Main`
+      \ - **Explanation:** The `java.lang.Object` class is the implicit superclass of all classes in Java.
 - [x] `java.lang.Object`
-- [ ] `SuperClass` \- **Explanation:** The `java.lang.Object` class is the implicit superclass of all classes in Java.
+- [ ] `SuperClass`
+      \- **Explanation:** The `java.lang.Object` class is the implicit superclass of all classes in Java.
 
 25. **What is a potential use case for method overloading in Java?**
 
@@ -359,10 +370,13 @@ public class Main {
 
 What is the output when you run the `main` method?
 
-- [ ] "A's display" \- **Explanation:** The output is "B's display" due to runtime polymorphism. The method of the actual object (B) is called.
+- [ ] "A's display"
+      \- **Explanation:** The output is "B's display" due to runtime polymorphism. The method of the actual object (B) is called.
 - [x] "B's display"
-- [ ] An error will occur.\ - **Explanation:** The output is "B's display" due to runtime polymorphism. The method of the actual object (B) is called.
-- [ ] The code will not compile.\ - **Explanation:** The output is "B's display" due to runtime polymorphism. The method of the actual object (B) is called.
+- [ ] An error will occur.
+      \ - **Explanation:** The output is "B's display" due to runtime polymorphism. The method of the actual object (B) is called.
+- [ ] The code will not compile.
+      \ - **Explanation:** The output is "B's display" due to runtime polymorphism. The method of the actual object (B) is called.
 
 27. Which of the following code snippets demonstrates method overriding in Java?
 
@@ -377,10 +391,13 @@ b) @Override
 }
 ```
 
-- [ ] Both (a) and (b) - \*\*Explanation:\*\* Method overriding is demonstrated by the `@Override` annotation, as shown in snippet (b).
+- [ ] Both (a) and (b) -
+      \*\*Explanation:\*\* Method overriding is demonstrated by the `@Override` annotation, as shown in snippet (b).
 - [x] Only (b)
-- [ ] Only (a) - \*\*Explanation:\*\* Method overriding is demonstrated by the `@Override` annotation, as shown in snippet (b).
-- [ ] Neither (a) nor (b) - \*\*Explanation:\*\* Method overriding is demonstrated by the `@Override` annotation, as shown in snippet (b).
+- [ ] Only (a) -
+      \*\*Explanation:\*\* Method overriding is demonstrated by the `@Override` annotation, as shown in snippet (b).
+- [ ] Neither (a) nor (b) -
+      \*\*Explanation:\*\* Method overriding is demonstrated by the `@Override` annotation, as shown in snippet (b).
 
 28. In Java, which keyword is used to call a method from within the same class, without creating an instance of the class?
 
@@ -425,29 +442,37 @@ public class Main {
 
 What is the output when you run the `main` method?
 
-- [ ] "Drawing a figure." twice -\ **Explanation:** The output is "Drawing a circle." followed by "Drawing a square." due to runtime polymorphism.
+- [ ] "Drawing a figure." twice
+      -\ **Explanation:** The output is "Drawing a circle." followed by "Drawing a square." due to runtime polymorphism.
 
 - [x] "Drawing a circle." followed by "Drawing a square."
-- [ ] "Drawing a square." twice \- **Explanation:** The output is "Drawing a circle." followed by "Drawing a square." due to runtime polymorphism.
+- [ ] "Drawing a square." twice
+      \- **Explanation:** The output is "Drawing a circle." followed by "Drawing a square." due to runtime polymorphism.
 
-- [ ] "Drawing a circle." twice \- **Explanation:** The output is "Drawing a circle." followed by "Drawing a square." due to runtime polymorphism.
+- [ ] "Drawing a circle." twice
+      \- **Explanation:** The output is "Drawing a circle." followed by "Drawing a square." due to runtime polymorphism.
 
 30. In Java, can you overload a method by just changing its return type?
 
-- [ ] Yes, as long as the method name and parameter list are the same.\ - **Explanation:** Method overloading in Java depends on the number and types of parameters, not just the return type.
+- [ ] Yes, as long as the method name and parameter list are the same.
+      \ - **Explanation:** Method overloading in Java depends on the number and types of parameters, not just the return type.
 - [x] No, method overloading is not based on the return type alone; it depends on the parameter list.
-- [ ] Yes, as long as the method name is unique within the class. \- **Explanation:** Method overloading in Java depends on the number and types of parameters, not just the return type.
-- [ ] Yes, as long as the method name is unique in the entire program.\ - **Explanation:** Method overloading in Java depends on the number and types of parameters, not just the return type.
+- [ ] Yes, as long as the method name is unique within the class.
+      \- **Explanation:** Method overloading in Java depends on the number and types of parameters, not just the return type.
+- [ ] Yes, as long as the method name is unique in the entire program.
+      \ - **Explanation:** Method overloading in Java depends on the number and types of parameters, not just the return type.
 
 31. **True or False: Polymorphism allows you to create objects of abstract classes.**
 
-- [ ] True\ - **Explanation:** False. You cannot create objects of abstract classes; they are meant to be subclassed, and their constructors cannot be invoked directly.
+- [ ] True
+      \ - **Explanation:** False. You cannot create objects of abstract classes; they are meant to be subclassed, and their constructors cannot be invoked directly.
 - [x] False
 
 32. **True or False: In method overloading, it is possible to have the same method name and the same parameter list but with different return types.**
 
 - [x] True
-- [ ] False\ - **Explanation:** True. Method overloading is based on the number and types of parameters, and the return type does not play a role in determining method overloads.
+- [ ] False
+      \ - **Explanation:** True. Method overloading is based on the number and types of parameters, and the return type does not play a role in determining method overloads.
 
 33. **What is method overriding in Java?**
 
@@ -471,9 +496,12 @@ What is the output when you run the `main` method?
 
 35. **Which keyword is used to prevent a method from being overridden in a Java subclass?**
 
-- [ ] `extend` \- **Explanation:** The `final` keyword is used to prevent a method from being overridden in a subclass.
-- [ ] `private` \- **Explanation:** The `final` keyword is used to prevent a method from being overridden in a subclass.
-- [ ] `final` \- **Explanation:** The `final` keyword is used to prevent a method from being overridden in a subclass.
+- [ ] `extend`
+      \- **Explanation:** The `final` keyword is used to prevent a method from being overridden in a subclass.
+- [ ] `private`
+      \- **Explanation:** The `final` keyword is used to prevent a method from being overridden in a subclass.
+- [ ] `final`
+      \- **Explanation:** The `final` keyword is used to prevent a method from being overridden in a subclass.
 - [x] `static`
 
 36. Consider the following code:
@@ -501,10 +529,13 @@ public class Main {
 
 What is the output when you run the `main` method?
 
-- [ ] "Parent's display"\ - **Explanation:** The output is "Child's display" due to runtime polymorphism. The method of the actual object (Child) is called.
+- [ ] "Parent's display"
+      \ - **Explanation:** The output is "Child's display" due to runtime polymorphism. The method of the actual object (Child) is called.
 - [x] "Child's display"
-- [ ] An error will occur. \- **Explanation:** The output is "Child's display" due to runtime polymorphism. The method of the actual object (Child) is called.
-- [ ] The code will not compile.\ - **Explanation:** The output is "Child's display" due to runtime polymorphism. The method of the actual object (Child) is called.
+- [ ] An error will occur.
+      \- **Explanation:** The output is "Child's display" due to runtime polymorphism. The method of the actual object (Child) is called.
+- [ ] The code will not compile.
+      \ - **Explanation:** The output is "Child's display" due to runtime polymorphism. The method of the actual object (Child) is called.
 
 37. Which of the following code snippets demonstrates method overloading in Java?
 
