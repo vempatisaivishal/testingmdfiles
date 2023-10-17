@@ -25,8 +25,8 @@
 
 4. **What is the primary difference between method overloading and method overriding in Java?**
 
-   - [ ] Method overloading allows methods with the same name and parameters, while method overriding does not.
-         --Explanation:Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
+   - [ ] Method overloading allows methods with the same name and parameters, while method overriding does not.\
+          -Explanation:Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
    - [x] Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
    - [ ] Method overriding is the same as method overloading.
          --Explanation:Method overloading involves multiple methods with the same name but different parameters, while method overriding involves a subclass providing a specific implementation for a method defined in its superclass.
